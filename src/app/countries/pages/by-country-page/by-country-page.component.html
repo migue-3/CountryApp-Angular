@@ -1,0 +1,22 @@
+<h2 class="text-center">Por País</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+    <!--SearchBox-->
+  <app-share-box
+   placeholder="Buscar por país"
+   (onValue)="searchByCountry($event)"
+   (onDebounce)="searchByCountry($event)"
+   [initialValue]="initialValue" 
+    ></app-share-box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr>
+        <countries-table [countries]="countries"></countries-table> <!--Le enviamos los paises que tengo de resultado de la busqueda-->
+    </div>
+</div>
+

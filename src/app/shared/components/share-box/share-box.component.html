@@ -1,0 +1,9 @@
+<input
+ type="text"
+ [placeholder]="placeholder"
+  class="form-control animate__animated animate__zoomInDown"
+  (keyup.enter)="emitValue( txtInput.value )"
+  (keyup)="onKeyPress( txtInput.value )"
+  [value]="initialValue"
+  #txtInput
+  >
